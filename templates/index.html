@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QAOA Maritime Logistics</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-icon">⚓</div>
+  <div>
+    <div class="header-title">QAOA Maritime Logistics Optimiser</div>
+    <div class="header-sub">Quantum Optimisation · Digital Twin · Route & Berth Scheduling</div>
+  </div>
+  <div class="badges">
+    <span class="badge">QISKIT 2.3</span>
+    <span class="badge">22-QUBIT QUBO</span>
+    <span class="badge amber">DIGITAL TWIN</span>
+  </div>
+</div>
+
+<div class="body">
+
+  <div class="sidebar">
+    <h3>⚙ Configuration</h3>
+
+    <div class="form-group">
+      <label class="form-label">Scenario</label>
+      <div class="radio-group">
+        <label><input type="radio" name="scenario" value="normal"> <span>🟢 Normal</span></label>
+        <label><input type="radio" name="scenario" value="stressed" checked> <span>🟡 Stressed</span></label>
+        <label><input type="radio" name="scenario" value="crisis"> <span>🔴 Crisis</span></label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">QAOA Layers (p)</label>
+      <input type="range" id="layers" min="1" max="4" value="2"
+             oninput="document.getElementById('lv').textContent=this.value">
+      <div class="range-row">
+        <span class="range-hint">1 (fast)</span>
+        <span class="range-val" id="lv">2</span>
+        <span class="range-hint">4 (deep)</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Vessels</label>
+      <input type="range" id="vessels" min="2" max="8" value="4"
+             oninput="document.getElementById('vv').textContent=this.value">
+      <div class="range-row">
+        <span class="range-hint">2</span>
+        <span class="range-val" id="vv">4</span>
+        <span class="range-hint">8</span>
+      </div>
+    </div>
+
+    <button class="run-btn" id="run-btn" onclick="startPipeline()">▶  RUN QAOA</button>
+    <div id="run-status" class="run-status"></div>
+
+    <div class="port-list">
+      <h3>📍 Ports</h3>
+      <div class="port-grid">
+        SHA · Shanghai<br>SIN · Singapore<br>HKG · Hong Kong<br>
+        ROT · Rotterdam<br>HAM · Hamburg<br>ANT · Antwerp<br>
+        LAX · Los Angeles<br>NYK · New York<br>DXB · Dubai<br>
+        COL · Colombo<br>MOM · Mombasa<br>SAO · Santos
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span id="progress-text" class="prog-text">Ready</span>
+        <span id="progress-pct" class="prog-pct">0%</span>
+      </div>
+      <div class="progress-bg">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+    </div>
+
+    <div class="terminal-wrap">
+      <div class="terminal-bar">
+        <div class="dot dot-r"></div>
+        <div class="dot dot-y"></div>
+        <div class="dot dot-g"></div>
+        <span class="terminal-title">qaoa_maritime — pipeline log</span>
+      </div>
+      <div id="terminal" class="terminal">
+        <div class="log-muted">
+          ⚓  QAOA Maritime Logistics Optimiser<br>
+          Configure parameters and click RUN QAOA.<br><br>
+          Steps: Digital Twin → QUBO → QAOA → Benchmarks → Landscape → Charts
+        </div>
+      </div>
+    </div>
+
+    <div class="kpi-row" id="kpi-row" style="display:none"></div>
+
+    <div id="results" style="display:none">
+
+      <div class="charts-grid">
+        <div class="chart-card">
+          <div class="chart-header">📈 Convergence + Energy Landscape</div>
+          <img id="img-conv" src="" alt="">
+        </div>
+        <div class="chart-card">
+          <div class="chart-header">📊 Distribution + Benchmark</div>
+          <img id="img-dist" src="" alt="">
+        </div>
+        <div class="chart-card full">
+          <div class="chart-header">🔮 Digital Twin — Congestion + Berth Queue</div>
+          <img id="img-twin" src="" alt="">
+        </div>
+        <div class="chart-card full">
+          <div class="chart-header">🌐 Port Network + Route Assignments</div>
+          <img id="img-map" src="" alt="">
+        </div>
+        <div class="chart-card">
+          <div class="chart-header">⛽ Fuel + Arrivals + Throughput</div>
+          <img id="img-ops" src="" alt="">
+        </div>
+        <div class="chart-card">
+          <div class="chart-header">🧮 QUBO Matrix + Top-K</div>
+          <img id="img-qubo" src="" alt="">
+        </div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-header">🗺 Route Candidates + QAOA Assignments</div>
+        <div class="table-wrap"><table id="routes-table"></table></div>
+      </div>
+
+      <div class="table-card" id="events-card" style="display:none">
+        <div class="table-header">⚡ Disruption Events</div>
+        <div class="table-wrap"><table id="events-table"></table></div>
+      </div>
+
+      <div class="table-card">
+        <div class="table-header">🏆 Top-K Solutions</div>
+        <div class="table-wrap"><table id="topk-table"></table></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="/static/main.js"></script>
+</body>
+</html>

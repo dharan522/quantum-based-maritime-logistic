@@ -1,0 +1,296 @@
+{
+  "scenario": "stressed",
+  "p_layers": 2,
+  "n_vessels": 4,
+  "n_events": 2,
+  "qaoa": {
+    "bitstring": "1001001001000000000100",
+    "qubo_energy": -38.7795,
+    "assignments": {
+      "Pacific Titan": {
+        "route": [
+          "ROT",
+          "HAM",
+          "ANT"
+        ],
+        "distance_nm": 470.80918732808436,
+        "days": 0.89,
+        "total_cost": 202412.0,
+        "cost_multiplier": 1.0
+      },
+      "Atlantic Star": {
+        "route": [
+          "ROT",
+          "HAM",
+          "ANT"
+        ],
+        "distance_nm": 470.80918732808436,
+        "days": 0.93,
+        "total_cost": 200141.0,
+        "cost_multiplier": 1.0
+      },
+      "Indian Express": {
+        "route": [
+          "ROT",
+          "HAM",
+          "ANT"
+        ],
+        "distance_nm": 470.80918732808436,
+        "days": 0.98,
+        "total_cost": 167235.0,
+        "cost_multiplier": 1.0
+      },
+      "Suez Carrier": {
+        "route": [
+          "ROT",
+          "HAM",
+          "ANT"
+        ],
+        "distance_nm": 470.80918732808436,
+        "days": 1.03,
+        "total_cost": 158485.0,
+        "cost_multiplier": 1.0
+      }
+    },
+    "n_assigned": 4,
+    "total_cost": 728273.0,
+    "constraints_satisfied": true
+  },
+  "top_k": [
+    {
+      "bitstring": "1001001001000000000100",
+      "probability": 0.0096,
+      "energy": -38.7795,
+      "count": 79
+    },
+    {
+      "bitstring": "1001001001000000000101",
+      "probability": 0.0082,
+      "energy": -37.9173,
+      "count": 67
+    },
+    {
+      "bitstring": "1001001001000000000000",
+      "probability": 0.0077,
+      "energy": -39.7087,
+      "count": 63
+    },
+    {
+      "bitstring": "1001001001000000000001",
+      "probability": 0.0076,
+      "energy": -38.8465,
+      "count": 62
+    },
+    {
+      "bitstring": "1001001001000000001000",
+      "probability": 0.0056,
+      "energy": -39.6476,
+      "count": 46
+    },
+    {
+      "bitstring": "1001001001000000001100",
+      "probability": 0.005,
+      "energy": -38.7184,
+      "count": 41
+    },
+    {
+      "bitstring": "1001001001000000001101",
+      "probability": 0.0044,
+      "energy": -37.8563,
+      "count": 36
+    },
+    {
+      "bitstring": "1001001001000000001001",
+      "probability": 0.0038,
+      "energy": -38.7854,
+      "count": 31
+    }
+  ],
+  "benchmark": [
+    {
+      "method": "QAOA",
+      "total_cost": 728273.0,
+      "type": "quantum"
+    },
+    {
+      "method": "Greedy-NN",
+      "total_cost": 65176.0,
+      "type": "classical"
+    },
+    {
+      "method": "Clarke-Wright",
+      "total_cost": 14132202.0,
+      "type": "classical"
+    }
+  ],
+  "qubo_meta": {
+    "n_vars": 22,
+    "n_vessels": 4,
+    "n_routes": 3,
+    "qubo_shape": [
+      22,
+      22
+    ],
+    "qubo_range": [
+      -9.936606,
+      20.0
+    ],
+    "var_labels": [
+      "x_v0_r0",
+      "x_v0_r1",
+      "x_v0_r2",
+      "x_v1_r0",
+      "x_v1_r1",
+      "x_v1_r2",
+      "x_v2_r0",
+      "x_v2_r1",
+      "x_v2_r2",
+      "x_v3_r0",
+      "x_v3_r1",
+      "x_v3_r2",
+      "b_SHA_SIN",
+      "b_SHA_HKG",
+      "b_SHA_ROT",
+      "b_SHA_HAM",
+      "b_SHA_ANT",
+      "b_SIN_HKG",
+      "b_HKG_HAM",
+      "b_ROT_HAM",
+      "b_ROT_ANT",
+      "b_HAM_ANT"
+    ]
+  },
+  "routes": [
+    {
+      "vessel": "Pacific Titan",
+      "route_idx": 0,
+      "route": "ROT \u2192 HAM \u2192 ANT",
+      "distance_nm": 470.80918732808436,
+      "days": 0.89,
+      "cost_usd": 202412.0,
+      "var": "x_v0_r0"
+    },
+    {
+      "vessel": "Pacific Titan",
+      "route_idx": 1,
+      "route": "ROT \u2192 ANT \u2192 NYK",
+      "distance_nm": 3218.534005337266,
+      "days": 6.1,
+      "cost_usd": 1976820.2168451406,
+      "var": "x_v0_r1"
+    },
+    {
+      "vessel": "Pacific Titan",
+      "route_idx": 2,
+      "route": "HAM \u2192 ANT \u2192 NYK",
+      "distance_nm": 3424.347686844837,
+      "days": 6.49,
+      "cost_usd": 2103230.329878592,
+      "var": "x_v0_r2"
+    },
+    {
+      "vessel": "Atlantic Star",
+      "route_idx": 0,
+      "route": "ROT \u2192 HAM \u2192 ANT",
+      "distance_nm": 470.80918732808436,
+      "days": 0.93,
+      "cost_usd": 200141.0,
+      "var": "x_v1_r0"
+    },
+    {
+      "vessel": "Atlantic Star",
+      "route_idx": 1,
+      "route": "ROT \u2192 ANT \u2192 NYK",
+      "distance_nm": 3218.534005337266,
+      "days": 6.39,
+      "cost_usd": 1954633.7305266028,
+      "var": "x_v1_r1"
+    },
+    {
+      "vessel": "Atlantic Star",
+      "route_idx": 2,
+      "route": "HAM \u2192 ANT \u2192 NYK",
+      "distance_nm": 3424.347686844837,
+      "days": 6.79,
+      "cost_usd": 2079625.2227671172,
+      "var": "x_v1_r2"
+    },
+    {
+      "vessel": "Indian Express",
+      "route_idx": 0,
+      "route": "ROT \u2192 HAM \u2192 ANT",
+      "distance_nm": 470.80918732808436,
+      "days": 0.98,
+      "cost_usd": 167235.0,
+      "var": "x_v2_r0"
+    },
+    {
+      "vessel": "Indian Express",
+      "route_idx": 1,
+      "route": "ROT \u2192 ANT \u2192 NYK",
+      "distance_nm": 3218.534005337266,
+      "days": 6.71,
+      "cost_usd": 1633271.1193604853,
+      "var": "x_v2_r1"
+    },
+    {
+      "vessel": "Indian Express",
+      "route_idx": 2,
+      "route": "HAM \u2192 ANT \u2192 NYK",
+      "distance_nm": 3424.347686844837,
+      "days": 7.13,
+      "cost_usd": 1737713.32510996,
+      "var": "x_v2_r2"
+    },
+    {
+      "vessel": "Suez Carrier",
+      "route_idx": 0,
+      "route": "ROT \u2192 HAM \u2192 ANT",
+      "distance_nm": 470.80918732808436,
+      "days": 1.03,
+      "cost_usd": 158485.0,
+      "var": "x_v3_r0"
+    },
+    {
+      "vessel": "Suez Carrier",
+      "route_idx": 1,
+      "route": "ROT \u2192 ANT \u2192 NYK",
+      "distance_nm": 3218.534005337266,
+      "days": 7.06,
+      "cost_usd": 1547813.8599527394,
+      "var": "x_v3_r1"
+    },
+    {
+      "vessel": "Suez Carrier",
+      "route_idx": 2,
+      "route": "HAM \u2192 ANT \u2192 NYK",
+      "distance_nm": 3424.347686844837,
+      "days": 7.51,
+      "cost_usd": 1646791.5898381828,
+      "var": "x_v3_r2"
+    }
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-20 08:31",
+      "port": "SHA",
+      "event_type": "weather",
+      "severity": 0.55,
+      "duration_hr": 19.0,
+      "delay_hours": 26.2,
+      "throughput%": 78.0,
+      "cost_mult": 1.44
+    },
+    {
+      "timestamp": "2026-03-23 04:41",
+      "port": "NYK",
+      "event_type": "congestion",
+      "severity": 0.536,
+      "duration_hr": 18.8,
+      "delay_hours": 18.1,
+      "throughput%": 86.6,
+      "cost_mult": 1.429
+    }
+  ],
+  "fuel_last": 625.3
+}

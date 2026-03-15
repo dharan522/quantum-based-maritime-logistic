@@ -1,0 +1,98 @@
+{
+  "SHA": {
+    "name": "Shanghai",
+    "lat": 31.23,
+    "lon": 121.47,
+    "berths": 8,
+    "handling_rate": 4500,
+    "region": "Asia"
+  },
+  "SIN": {
+    "name": "Singapore",
+    "lat": 1.29,
+    "lon": 103.85,
+    "berths": 6,
+    "handling_rate": 4200,
+    "region": "Asia"
+  },
+  "HKG": {
+    "name": "Hong Kong",
+    "lat": 22.3,
+    "lon": 114.17,
+    "berths": 5,
+    "handling_rate": 3800,
+    "region": "Asia"
+  },
+  "ROT": {
+    "name": "Rotterdam",
+    "lat": 51.92,
+    "lon": 4.48,
+    "berths": 10,
+    "handling_rate": 5200,
+    "region": "Europe"
+  },
+  "HAM": {
+    "name": "Hamburg",
+    "lat": 53.55,
+    "lon": 9.99,
+    "berths": 7,
+    "handling_rate": 3900,
+    "region": "Europe"
+  },
+  "ANT": {
+    "name": "Antwerp",
+    "lat": 51.22,
+    "lon": 4.4,
+    "berths": 6,
+    "handling_rate": 4100,
+    "region": "Europe"
+  },
+  "LAX": {
+    "name": "Los Angeles",
+    "lat": 33.73,
+    "lon": -118.27,
+    "berths": 9,
+    "handling_rate": 4700,
+    "region": "Americas"
+  },
+  "NYK": {
+    "name": "New York",
+    "lat": 40.66,
+    "lon": -74.04,
+    "berths": 7,
+    "handling_rate": 4000,
+    "region": "Americas"
+  },
+  "DXB": {
+    "name": "Dubai (Jebel Ali)",
+    "lat": 24.99,
+    "lon": 55.06,
+    "berths": 8,
+    "handling_rate": 4600,
+    "region": "Middle East"
+  },
+  "COL": {
+    "name": "Colombo",
+    "lat": 6.93,
+    "lon": 79.85,
+    "berths": 5,
+    "handling_rate": 3500,
+    "region": "Asia"
+  },
+  "MOM": {
+    "name": "Mombasa",
+    "lat": -4.05,
+    "lon": 39.66,
+    "berths": 4,
+    "handling_rate": 2800,
+    "region": "Africa"
+  },
+  "SAO": {
+    "name": "Santos",
+    "lat": -23.95,
+    "lon": -46.33,
+    "berths": 6,
+    "handling_rate": 3600,
+    "region": "Americas"
+  }
+}

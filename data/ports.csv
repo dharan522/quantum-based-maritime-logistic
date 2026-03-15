@@ -1,0 +1,13 @@
+port_id,name,lat,lon,berths,handling_rate,region
+SHA,Shanghai,31.23,121.47,8,4500,Asia
+SIN,Singapore,1.29,103.85,6,4200,Asia
+HKG,Hong Kong,22.3,114.17,5,3800,Asia
+ROT,Rotterdam,51.92,4.48,10,5200,Europe
+HAM,Hamburg,53.55,9.99,7,3900,Europe
+ANT,Antwerp,51.22,4.4,6,4100,Europe
+LAX,Los Angeles,33.73,-118.27,9,4700,Americas
+NYK,New York,40.66,-74.04,7,4000,Americas
+DXB,Dubai (Jebel Ali),24.99,55.06,8,4600,Middle East
+COL,Colombo,6.93,79.85,5,3500,Asia
+MOM,Mombasa,-4.05,39.66,4,2800,Africa
+SAO,Santos,-23.95,-46.33,6,3600,Americas

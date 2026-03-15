@@ -1,0 +1,9 @@
+id,name,type,capacity_teu,speed_knots,fuel_tday,cost_day
+V01,Pacific Titan,ULCV,20000,22,280,45000
+V02,Atlantic Star,ULCV,18000,21,265,42000
+V03,Indian Express,VLCV,14000,20,210,34000
+V04,Suez Carrier,VLCV,12000,19,190,30000
+V05,Feeder Alpha,Feeder,4000,17,95,14000
+V06,Feeder Beta,Feeder,3500,16,85,12000
+V07,Coastal Runner,Feeder,2000,15,55,8000
+V08,Tanker Zeus,Tanker,8000,18,145,22000
